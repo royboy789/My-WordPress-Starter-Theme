@@ -6,8 +6,7 @@ define( 'MY_THEME_ASSETS_URI', MY_THEME_BASE_URI.'/assets' );
 define( 'MY_THEME_BUILD_URI', MY_THEME_BASE_URI.'/build' );
 define( 'MY_THEME_VERSION', '1.0' );
 
-require_once 'includes/theme-enqueue.php';
-
+require_once get_template_directory() . '/includes/theme-enqueue.php';
 
 class gepetto_theme {
 
