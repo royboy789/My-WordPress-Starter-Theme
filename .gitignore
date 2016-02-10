@@ -16,3 +16,5 @@ wp-content/plugins/hello.php
 /readme.html
 /license.txt
 
+node_modules/
+build/
