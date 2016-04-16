@@ -8,7 +8,7 @@ define( 'MY_THEME_VERSION', '1.0' );
 
 require_once get_template_directory() . '/includes/theme-enqueue.php';
 
-class gepetto_theme {
+class my_theme {
 
 	protected $theme_enqueue;
 
@@ -19,12 +19,14 @@ class gepetto_theme {
 	function theme_enqueue() {
 		$this->theme_enqueue->theme_scripts();
 	}
-	
-	
+	function theme_setup() {
+		add_theme_support( 'title-tag' );
+	}
 }
 
-$my_theme = new gepetto_theme();
+$my_theme = new my_theme();
 
 add_action( 'wp_enqueue_scripts', array( $my_theme, 'theme_enqueue' ) );
+add_action( 'after_setup_theme', array( $my_theme, 'theme_setup' ) );
 
 ?>
