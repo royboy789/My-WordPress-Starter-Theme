@@ -6,5 +6,4 @@ my_theme.run = function($) {
 		console.log('My Starter Theme');
 	});
 	
-	
 }(jQuery);
