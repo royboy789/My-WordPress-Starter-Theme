@@ -39,7 +39,7 @@ gulp.task('js', function(){
 	.pipe(gulp.dest('./build/js'));
 });
 
-gulp.task('default', function(){
+gulp.task('default', ['sass', 'js'], function(){
 	gulp.watch( './assets/scss/*.scss', ['sass'] );
 	gulp.watch( jsFileList, ['js'] );
 });
