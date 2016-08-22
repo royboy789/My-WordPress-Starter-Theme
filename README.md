@@ -43,5 +43,5 @@ Open `GruntFile.js` and comment out any JS files you do not need from the `jsFil
 
 Gulp
 =====  
-- `grunt sass` - Minify CSS
-- `grunt js` - Concatenate & Minify JS
+- `gulp sass` - Minify CSS
+- `gulp js` - Concatenate & Minify JS
