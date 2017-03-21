@@ -6,6 +6,7 @@
     "type": "git",
     "url": "https://github.com/royboy789/My-WordPress-Starter-Theme.git"
   },
+  "license": "GPL-3.0",
   "author": "royboy789",
   "devDependencies": {
     "bootstrap-sass": "^3.3.1",
