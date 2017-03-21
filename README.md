@@ -33,13 +33,7 @@ To add scripts to gulp task add them to the __jsFileList__ array in `gulpfile.js
   
 Bootstrap
 =========
-Twitter Bootstrap is included, 
-  
-__Customizing Bootstrap SASS__  
-Open `/assets/scss/_bootstrap-custom` and comment out any css you do not need for your build.  
-
-__Customizing Bootstrap JS__  
-Open `GruntFile.js` and comment out any JS files you do not need from the `jsFileList` array.
+The `no-bootstrap` branch does not include bootstrap, check the `master` branch
 
 Gulp
 =====  
