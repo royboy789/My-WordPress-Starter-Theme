@@ -11,7 +11,7 @@ Technology
 Requirements
 ============
 - Node (npm cli)
-- Grunt (grunt cli)
+- Gulp (gulp cli)
     
 Quick Start
 ===========
