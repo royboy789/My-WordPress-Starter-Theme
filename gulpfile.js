@@ -43,3 +43,5 @@ gulp.task('default', ['sass', 'js'], function(){
 	gulp.watch( './assets/scss/*.scss', ['sass'] );
 	gulp.watch( jsFileList, ['js'] );
 });
+
+gulp.task('build', ['sass','js']);
