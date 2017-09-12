@@ -5,21 +5,29 @@ $bootstrap-sass-asset-helper: false !default;
 
 
 //== Colors
+$color-caldera-green: #a3bf61;
+$color-caldera-dark-green: #0b7a6f;
+$color-caldera-orange: #ff7e30;
+
+
+// Fonts
+$font-caldera-title-font: 'Source Sans Pro', sans-serif;
+
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-base:              #000 !default;
+$gray-base:              #3a3a3c !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
 $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+$brand-primary:         $color-caldera-green; // #337ab7
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
+$brand-warning:         $color-caldera-orange !default;
+$brand-danger:          $color-caldera-orange !default;
 
 
 //== Scaffolding
@@ -27,9 +35,9 @@ $brand-danger:          #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff !default;
+$body-bg:               lighten( $gray-base, 75% ) !default;
 //** Global text color on `<body>`.
-$text-color:            $gray-dark !default;
+$text-color:            #585858 !default;
 
 //** Global textual link color.
 $link-color:            $brand-primary !default;

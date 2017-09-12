@@ -1,0 +1,163 @@
+header.caldera-site-header {
+  background: $gray-base;
+  border-bottom: 3px solid $color-caldera-dark-green;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media screen and (max-width:$screen-xs) {
+    left: 0;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 100;
+  }
+  .menu-toggle {
+    color: white;
+    font-size: 1.5em;
+  }
+  .logo {
+    color: white;
+    font-family: $font-caldera-title-font;
+    font-weight: 700;
+    font-size: 1.5em;
+    height: 36px;
+    text-transform: uppercase;
+    img {
+      display: inline-block;
+      height: 27px;
+      margin: 0 10px 0 0;
+      vertical-align: top;
+    }
+    &:hover {
+      color: $color-caldera-green;
+      text-decoration: none;
+    }
+  }
+  nav {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      li {
+        display: inline-block;
+        a {
+          color: white;
+          display: block;
+          font-family: $font-caldera-title-font;
+          font-size: 1.25em;
+          font-weight: 700;
+          line-height: 30px;
+          padding: 0 12px;
+          text-align: center;
+          text-transform: uppercase;
+          &:hover {
+            background: $color-caldera-green;
+            text-decoration: none;
+          }
+        }
+        &.current-menu-item {
+          a {
+            background: $color-caldera-green;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .social {
+    a {
+      background: white;
+      border-radius: 50%;
+      color: $color-caldera-green;
+      display: inline-block;
+      font-size: 1.25em;
+      line-height: 36px;
+      text-align: center;
+      width: 36px;
+      &:hover {
+        background: $color-caldera-green;
+        color: white;
+      }
+    }
+  }
+
+  #mobile-menu {
+    background: $color-caldera-dark-green;
+    display: none;
+    min-height: 100%;
+    left: -100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all 0.5s;
+    z-index: 1000;
+    @media screen and (max-width:$screen-md) {
+      display: block;
+    }
+    .mobile-menu-top {
+      background:  lighten( $gray-base, 75% );
+      padding: 20px 30px;
+      text-align: center;
+      .logo {
+        color: $color-caldera-dark-green;
+        font-size: 2em;
+        line-height: 37px;
+        img {
+          height: 37px;
+        }
+        @media screen and (max-width:$screen-xs) {
+          font-size: 1.5em;
+          line-height: normal;
+          img {
+            height: 22px;
+          }
+        }
+      }
+      .menu-toggle {
+        color: $color-caldera-orange;
+        font-size: 3em;
+        font-weight: 400;
+        line-height: 42px;
+        @media screen and (max-width:$screen-xs) {
+          font-size: 2em;
+          line-height: normal;
+        }
+      }
+    }
+    nav {
+      overflow: auto;
+      padding: 20px 0 0;
+      ul {
+        li {
+          display: block;
+          a {
+            font-size: 2.75em;
+            line-height: 80px;
+            @media screen and (max-width:$screen-xs) {
+              font-size: 2em;
+              line-height: 60px;
+            }
+
+          }
+        }
+      }
+    }
+    .social {
+      padding: 30px;
+      text-align: center;
+      a {
+        font-size: 1.75em;
+        line-height: 60px;
+        width: 60px;
+      }
+    }
+  }
+}
+
+body.menu-on {
+  header.caldera-site-header {
+    #mobile-menu {
+      left: 0;
+    }
+  }
+}

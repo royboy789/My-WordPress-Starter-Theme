@@ -10,6 +10,7 @@
   "author": "royboy789",
   "devDependencies": {
     "bootstrap-sass": "^3.3.1",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-minify-css": "^1.2.1",

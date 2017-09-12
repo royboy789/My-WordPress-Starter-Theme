@@ -1,0 +1,120 @@
+#home-hero {
+  background-color: #020001;
+  background-image: url(../../images/loopconf-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  border-bottom: 5px solid $color-caldera-dark-green;
+  height: 60vh;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .home-hero-cta {
+    p {
+      color: white;
+      font-family: $font-caldera-title-font;
+      font-size: 3em;
+      font-weight: 700;
+      margin: 0 0 20px 0;
+      text-shadow: 0 0 2px black;
+      text-transform: uppercase;
+    }
+    .btn {
+      font-size: 1.5em;
+    }
+  }
+
+}
+
+$course-height: 50vh;
+$teacher-height: 200px;
+.courses-teachers {
+  .course, .teacher, .blog-post {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: $course-height;
+    a {
+      display: block;
+      height: $course-height;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      span.course-title {
+        color: white;
+        display: block;
+        font-family: $font-caldera-title-font;
+        font-size: 3em;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        .btn {
+          display: block;
+          margin: 10px auto 0 auto;
+          width: 50%;
+        }
+      }
+    }
+  }
+  h3.teacher-title {
+    font-family: $font-caldera-title-font;
+    font-size: 3em;
+    font-weight: 400;
+    text-align: center;
+  }
+  .teacher {
+    height: $teacher-height + 40;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    a {
+      height: $teacher-height;
+      text-align: center;
+      @media screen and (max-width:$screen-md) {
+        height: auto;
+      }
+      img {
+        border: 2px solid $color-caldera-orange;
+        border-radius: 50%;
+        display: block;
+        height: auto;
+        max-height: $teacher-height;
+        margin: 0 auto;
+        width: 90%;
+        max-width: $teacher-height;
+        transition: all 0.5s;
+      }
+      span.teacher-title {
+        color: $color-caldera-orange;
+        display: block;
+        font-size: 1.5em;
+        opacity: 0;
+        position: absolute;
+        text-shadow: 0 0 1px black;
+        text-transform: uppercase;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.5s;
+        width: 100%;
+        @media screen and (max-width:$screen-md) {
+          opacity: 0.9;
+        }
+      }
+      &:hover {
+        span.teacher-title {
+          opacity: 0.9;
+        }
+        img {
+          border-color: $color-caldera-green;
+        }
+      }
+    }
+  }
+  .blog-post {
+    a {
+      font-size: 0.75em;
+    }
+  }
+}

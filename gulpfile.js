@@ -8,19 +8,19 @@ var gulp = require('gulp'),
 	watch = require('gulp-watch');
 
 var jsFileList = [
-	'node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
-	'node_modules/bootstrap-sass/assets/javascripts/bootstrap/alert.js',
+	// 'node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
+	// 'node_modules/bootstrap-sass/assets/javascripts/bootstrap/alert.js',
 	'node_modules/bootstrap-sass/assets/javascripts/bootstrap/button.js',
 	'node_modules/bootstrap-sass/assets/javascripts/bootstrap/carousel.js',
-	'node_modules/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
-	'node_modules/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
+	// 'node_modules/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
+	// 'node_modules/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
 	'node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal.js',
-	'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
-	'node_modules/bootstrap-sass/assets/javascripts/bootstrap/popover.js',
-	'node_modules/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
-	'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
-	'node_modules/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
-	'assets/js/theme-script.js',
+	// 'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
+	// 'node_modules/bootstrap-sass/assets/javascripts/bootstrap/popover.js',
+	// 'node_modules/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
+	// 'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
+	// 'node_modules/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
+	'assets/js/theme-script.js'
 ];
 
 gulp.task('sass', function() {
@@ -40,8 +40,13 @@ gulp.task('js', function(){
 });
 
 gulp.task('default', ['sass', 'js'], function(){
-	gulp.watch( './assets/scss/*.scss', ['sass'] );
+	gulp.watch( './assets/scss/**/*.scss', ['sass'] );
 	gulp.watch( jsFileList, ['js'] );
 });
 
-gulp.task('build', ['sass','js']);
+gulp.task('fonts', function(){
+	gulp.src('node_modules/font-awesome/fonts/**/*')
+		.pipe(gulp.dest('./build/fonts'));
+});
+
+gulp.task('build', ['fonts','sass','js']);

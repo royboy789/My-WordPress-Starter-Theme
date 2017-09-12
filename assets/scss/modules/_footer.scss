@@ -1,0 +1,91 @@
+footer.caldera-site-footer {
+  background: $gray-base;
+  border-top: 3px solid $color-caldera-dark-green;
+  margin-top: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @media screen and (max-width:$screen-xs) {
+    text-align: center;
+  }
+  .logo {
+    color: white;
+    font-family: $font-caldera-title-font;
+    font-weight: 700;
+    font-size: 1.5em;
+    height: 36px;
+    text-transform: uppercase;
+    img {
+      display: inline-block;
+      height: 36px;
+      margin: 0 10px 0 0;
+      vertical-align: top;
+    }
+    &:hover {
+      color: $color-caldera-green;
+      text-decoration: none;
+    }
+  }
+  nav {
+    margin: 10px 0 0 0;
+    @media screen and (max-width:$screen-xs) {
+      display: none;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+
+        a {
+          color: white;
+          display: block;
+          font-family: $font-caldera-title-font;
+          font-size: 1em;
+          font-weight: 700;
+          line-height: 25px;
+          text-align: left;
+          text-transform: uppercase;
+          &:hover {
+            color: $color-caldera-green;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .social {
+    a {
+      background: white;
+      border-radius: 50%;
+      color: $color-caldera-green;
+      display: inline-block;
+      font-size: 1.25em;
+      line-height: 36px;
+      text-align: center;
+      width: 36px;
+      &:hover {
+        background: $color-caldera-green;
+        color: white;
+      }
+    }
+  }
+
+  .footer-title {
+    color: white;
+    display: block;
+    font-family: $font-caldera-title-font;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    @media screen and (max-width:$screen-xs) {
+      margin: 20px 0;
+    }
+  }
+}
+
+body.home {
+  footer.caldera-site-footer {
+    margin-top: 0;
+  }
+}

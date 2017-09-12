@@ -1,0 +1,9 @@
+body {
+  &.menu-on {
+    overflow: hidden;
+  }
+  @media screen and (max-width:$screen-xs) {
+    padding-top: 72px;
+  }
+
+}
