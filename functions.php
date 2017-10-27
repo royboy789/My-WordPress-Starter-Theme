@@ -6,13 +6,13 @@ define( 'MY_THEME_ASSETS_URI', MY_THEME_BASE_URI.'/assets' );
 define( 'MY_THEME_BUILD_URI', MY_THEME_BASE_URI.'/build' );
 define( 'MY_THEME_VERSION', '3.0.0' );
 
-class CalderaLearnTheme {
+class DSBTheme {
 
     /**
      * Holds the class instance.
      *
      * @access  private
-     * @var     Teachers
+     * @var     DSBTheme
      */
     private static $instance;
 
@@ -20,7 +20,7 @@ class CalderaLearnTheme {
      * Returns the instance of this class.
      *
      * @access  public
-     * @return  Teachers
+     * @return  DSBTheme
      */
     public static function instance() {
         if (!! empty(self::$instance)) {
@@ -49,9 +49,9 @@ class CalderaLearnTheme {
 
 }
 
-function caldera_learn_init() {
-	return $Caldera = CalderaLearnTheme::instance();
+function dsb_theme_init() {
+	return $DSBTheme = DSBTheme::instance();
 }
-caldera_learn_init();
+dsb_theme_init();
 
 ?>
